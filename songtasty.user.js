@@ -2,7 +2,7 @@
 
 // ==UserScript==
 // @name        SongTasty
-// @version     0.1.1
+// @version     0.1.2
 // @description SongTasty歌曲下载
 // @author      iSayme
 // @namespace   https://github.com/isayme
@@ -20,11 +20,21 @@
     return $('.playinfos h1').text()
   }
 
-  function enableDownload () {
-    return $('#audiob')
-      .removeAttr('controlslist')
-      .attr('download', getName())
+  function getDownloadUrl () {
+    return $('#radioPlayer audio').attr('src')
   }
 
-  enableDownload()
+  function enableDownload (name, url) {
+    $('.jp-audio a:contains("下载")')
+      .attr('download', name)
+      .attr('href', url)
+  }
+
+  var timer = setInterval(function () {
+    var url = getDownloadUrl()
+    if (url) {
+      clearInterval(timer)
+      enableDownload(getName(), url)
+    }
+  }, 300)
 })()
