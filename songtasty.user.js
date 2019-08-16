@@ -11,6 +11,8 @@
 // @icon        http://www.songtasty.com/favicon.ico
 // @include     http://www.songtasty.com/song/*
 // @include     http://songtasty.com/song/*
+// @include     https://www.songtasty.com/song/*
+// @include     https://songtasty.com/song/*
 // @run-at      document-end
 // @grant       none
 // ==/UserScript==
