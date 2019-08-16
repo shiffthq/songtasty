@@ -2,7 +2,7 @@
 
 // ==UserScript==
 // @name        SongTasty
-// @version     0.1.2
+// @version     0.1.3
 // @description SongTasty歌曲下载
 // @author      iSayme
 // @namespace   https://github.com/isayme
